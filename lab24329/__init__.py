@@ -4,6 +4,16 @@ from pulumi_google_native.sqladmin import v1beta4 as sql
 
 
 def main():
+    # Creates a new Cloud SQL instance.
+    instance = sql.Instance(
+        "lab-instance",
+        name="qwiklabs-demo",
+        database_version=sql.InstanceDatabaseVersion.MYSQL57,
+        settings={
+            "tier": "db-n1-standard-1",
+        },
+    )
+
     # Create a GCS bucket
     bucket = storage.Bucket("lab-bucket")
 
@@ -21,16 +31,6 @@ def main():
         name="end_station_name.csv",
         bucket=bucket.name,
         source=pulumi.FileAsset("./lab24329/end_station_name.csv"),
-    )
-
-    # Creates a new Cloud SQL instance.
-    instance = sql.Instance(
-        "lab-instance",
-        name="qwiklabs-demo",
-        database_version=sql.InstanceDatabaseVersion.MYSQL57,
-        settings={
-            "tier": "db-n1-standard-1",
-        },
     )
 
     # create Cloud SQL database

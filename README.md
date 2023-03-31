@@ -10,7 +10,7 @@
 
 ```bash
 export PULUMI_CONFIG_PASSPHRASE=
-pulumi config set google-native:project qwiklabs-gcp-00-43659ddcdd80
+pulumi config set google-native:project qwiklabs-gcp-00-bba73c744932
 gcloud auth application-default login
 pulumi up --skip-preview --yes
 

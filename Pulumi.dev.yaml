@@ -1,5 +1,5 @@
 encryptionsalt: v1:U7gbL7N8RqI=:v1:A+ratuWiD59PNiZM:CUvL2Iw+MOFOIdr7U0jk3Vy/Gf2fgA==
 config:
-  google-native:project: "qwiklabs-gcp-00-43659ddcdd80"
+  google-native:project: "qwiklabs-gcp-00-bba73c744932"
   google-native:region: "us-central1"
   google-native:zone: "us-central1-a"
